@@ -111,8 +111,21 @@ ul {
 .nav a:hover {
   text-decoration: underline;
   color: #212121;
+  
 }
-
+.nav {
+  width: 300px;
+  position: absolute;
+  /* This transform moves the drawer off canvas. */
+  -webkit-transform: translate(-300px, 0);
+  transform: translate(-300px, 0);
+  /* Optionally, we animate the drawer. */
+  transition: transform 0.3s ease;
+}
+.nav.open {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
 
 /*
  *
