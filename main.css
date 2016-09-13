@@ -1,3 +1,7 @@
+@media only screen and (max-width: 400px) {
+  
+}
+
 body, html {
   margin: 0;
   padding: 0;
@@ -113,6 +117,8 @@ ul {
   color: #212121;
   
 }
+
+/* Style for the Off Canvas nav element */
 .nav {
   width: 300px;
   position: absolute;
