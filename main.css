@@ -1,3 +1,39 @@
+/* At screens of 500px or less, this code causes the navigational menu to be off-canvas/screen, only to be toggled with the hamburger button/icon */
+
+/*@media screen and (max-width: 501px) {*/
+/*  .nav {*/
+/*    width: 300px;*/
+/*    position: absolute;*/
+/*    /* This transform moves the drawer off canvas. */
+/*    -webkit-transform: translate(-300px, 0);*/
+/*    transform: translate(-300px, 0);*/
+/*    /* Optionally, we animate the drawer. */
+/*    transition: transform 0.3s ease;*/
+/*  }*/
+/*}*/
+/**/
+/*@media screen and (min-width: 501px) {*/
+/*  .header__menu {*/
+/*    display: none;*/
+/*  }*/
+/*}*/
+
+.nav {
+  width: 300px;
+  position: absolute;
+  /* This transform moves the drawer off canvas. */
+  -webkit-transform: translate(-100%, 0);
+  transform: translate(-100%, 0);
+  /* Optionally, we animate the drawer. */
+  transition: transform 0.3s ease;
+}
+
+/* This code opens up the drawer to the canvas */
+.nav.open {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
 body, html {
   margin: 0;
   padding: 0;
@@ -59,7 +95,7 @@ ul {
 }
 
 .header__logo {
-  height: 72px;
+  height: 52px;
   margin-right: 1em;
   vertical-align: top;
   margin-top: 12px;
@@ -67,12 +103,20 @@ ul {
 
 .header__title {
   font-weight: 300;
-  font-size: 4em;
+  font-size: 2.5em;
   margin: 0.5em 0.25em;
   display: inline-block;
   color: #212121;
 }
 
+.header__menu {
+  font-size: 2.5em;
+  text-decoration: none;
+  cursor: pointer;
+  float: right;
+  margin: 0.45em
+  
+}
 
 /*
  *
@@ -81,9 +125,11 @@ ul {
  */
 
 .nav {
-  width: 100%;
+  width: 75%;
   margin-left: auto;
   margin-right: auto;
+  z-index: 10;
+  background-color: #fff;
 }
 
 .nav__list {
@@ -94,7 +140,7 @@ ul {
 
 .nav__item {
   box-sizing: border-box;
-  display: inline-block;
+  display: list-item;
   width: 24%;
   text-align: center;
   line-height: 24px;
