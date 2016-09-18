@@ -96,7 +96,7 @@ ul {
 
 .header__logo {
   height: 52px;
-  margin-right: 1em;
+  margin: 0.25em 0.5em 1em 0.5em;
   vertical-align: top;
   margin-top: 12px;
 }
@@ -104,7 +104,7 @@ ul {
 .header__title {
   font-weight: 300;
   font-size: 2.5em;
-  margin: 0.5em 0.25em;
+  margin: 0.5em 0.10em;
   display: inline-block;
   color: #212121;
 }
@@ -112,10 +112,13 @@ ul {
 .header__menu {
   font-size: 2.5em;
   text-decoration: none;
+  display: inline-block;
+  text-align: center;
   cursor: pointer;
   float: right;
-  margin: 0.45em
-  
+  margin: 0.45em;
+  width:  40px;
+  height: 40px;
 }
 
 /*
